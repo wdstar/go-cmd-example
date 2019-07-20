@@ -17,3 +17,15 @@ Golang CLI implementation example
     $ go build
     $ ./go-cmd-example version
     ```
+1. Add goreleaser configurations.
+    ```bash
+    $ curl -sL -o /usr/local/bin/goreleaser https://git.io/goreleaser
+    $ chmod 755 /usr/local/bin/goreleaser
+    $ goreleaser init
+    # Snapshot build
+    $ goreleaser --snapshot --skip-publish --rm-dist
+    $ ./dist/go-cmd-example_linux_amd64/go-cmd-example version
+    # Production release
+    $ export GITHUB_TOKEN=**********************************
+    $ goreleaser --rm-dist
+    ```
