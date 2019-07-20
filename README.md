@@ -27,5 +27,7 @@ Golang CLI implementation example
     $ ./dist/go-cmd-example_linux_amd64/go-cmd-example version
     # Production release
     $ export GITHUB_TOKEN=**********************************
+    $ git tag -a vX.X.X -m 'initial release.'
+    $ git push --tags
     $ goreleaser --rm-dist
     ```
