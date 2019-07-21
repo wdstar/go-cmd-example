@@ -1,6 +1,13 @@
 # go-cmd-example
 Golang CLI implementation example
 
+## Examples
+
+- [Display version](./cmd/version.go)
+- [Parse flags](./cmd/test.go)
+- [Read in stdin](./cmd/stdio.go)
+- [Execute an external command](./cmd/exec.go)
+
 ## Development
 
 1. Generate a command template.
