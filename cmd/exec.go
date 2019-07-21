@@ -31,17 +31,15 @@ import (
 
 // execCmd represents the exec command
 var execCmd = &cobra.Command{
-	Use:   "exec command_name [-- command_opsions...] [command_args]",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:                   "exec command_path [-- command_flags...] [command_args...]",
+	DisableFlagsInUseLine: true,
+	Short:                 "command wrapper",
+	Long: `exec subcommand executes an external command.
+This has pipeline feature too.`,
 	SilenceErrors: true,
 	SilenceUsage:  true,
 	Args:          cobra.MinimumNArgs(1),
+	//DisableFlagParsing: true,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		fmt.Println("Info: exec called")
 		path := args[0]
