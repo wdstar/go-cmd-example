@@ -34,13 +34,13 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("test called")
+		fmt.Println("Info: test called")
 		// Flag alias resolution
 		ws := viper.GetString("workspace")
 		if ws == "" {
 			ws = viper.GetString("ws")
 		}
-		fmt.Printf("--workspace: %s\n", ws)
+		fmt.Printf("Info: --workspace: %s\n", ws)
 	},
 }
 

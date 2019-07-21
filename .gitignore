@@ -6,6 +6,7 @@
 *.dylib
 go-cmd-example
 dist/
+tmp/
 
 # Test binary, build with `go test -c`
 *.test
