@@ -43,13 +43,13 @@ to quickly create a Cobra application.`,
 		list := []string{}
 		for _, elm := range viper.GetStringSlice("list") {
 			// clean up each element
-			list = append(list, strings.Trim(elm, " []"))
+			list = append(list, strings.Trim(elm, " []'\""))
 		}
 		// override string slice
 		viper.Set("list", list)
 	},
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Info: test called")
+		fmt.Println("Info: test's Run called")
 
 		// Normalized string slice
 		fmt.Println(strings.Join(viper.GetStringSlice("list"), "|"))
