@@ -35,6 +35,7 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	PreRun: func(cmd *cobra.Command, args []string) {
+		fmt.Println("Info: test's PreRun called")
 		// Preprocess string slice (from CSV)
 		// e.g. --list='[ a, b, c ]'
 		fmt.Println(strings.Join(viper.GetStringSlice("list"), "|"))
@@ -60,6 +61,10 @@ to quickly create a Cobra application.`,
 			ws = viper.GetString("ws")
 		}
 		fmt.Printf("Info: --workspace: %s\n", ws)
+	},
+	PostRunE: func(cmd *cobra.Command, args []string) error {
+		fmt.Println("Info: test's PostRunE called")
+		return nil
 	},
 }
 
