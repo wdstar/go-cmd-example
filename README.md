@@ -6,6 +6,7 @@ Golang CLI implementation example
 - [Display version](./cmd/version.go)
 - [Parse flags](./cmd/test.go)
 - [Read in stdin](./cmd/stdio.go)
+- [SerDe (CSV, JSON, YAML)](./cmd/serde.go)
 - [Execute an external command](./cmd/exec.go)
 
 ## Development
