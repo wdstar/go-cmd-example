@@ -9,6 +9,7 @@ builds:
 - env:
   - GO111MODULE=on
   - CGO_ENABLED=0
+  - GITHUB_OWNER=wdstar
   goos:
   - windows
   - darwin
@@ -18,10 +19,10 @@ builds:
   #- 386
   ldflags:
   - -s -w
-    -X github.com/wdstar/go-cmd-example/cmd.version={{.Version}}
-    -X github.com/wdstar/go-cmd-example/cmd.commit={{.Commit}}
-    -X github.com/wdstar/go-cmd-example/cmd.date={{.Date}}
-    -X github.com/wdstar/go-cmd-example/cmd.builtBy=goreleaser
+    -X github.com/{{.Env.GITHUB_OWNER}}/{{.ProjectName}}/cmd.version={{.Version}}
+    -X github.com/{{.Env.GITHUB_OWNER}}/{{.ProjectName}}/cmd.commit={{.Commit}}
+    -X github.com/{{.Env.GITHUB_OWNER}}/{{.ProjectName}}/cmd.date={{.Date}}
+    -X github.com/{{.Env.GITHUB_OWNER}}/{{.ProjectName}}/cmd.builtBy=goreleaser
 archives:
 - replacements:
     darwin: Darwin
