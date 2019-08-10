@@ -3,6 +3,7 @@ Golang CLI implementation example
 
 ## Examples
 
+- [Arguments join](./cmd/args.go)
 - [Display version](./cmd/version.go)
 - [Parse flags](./cmd/test.go)
 - [Read in stdin](./cmd/stdio.go)

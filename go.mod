@@ -3,6 +3,7 @@ module github.com/wdstar/go-cmd-example
 go 1.12
 
 require (
+	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51
 	github.com/magiconair/properties v1.8.1 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/pelletier/go-toml v1.4.0 // indirect
