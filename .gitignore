@@ -6,11 +6,14 @@
 *.dylib
 go-cmd-example
 dist/
-reports/
 tmp/
 
 # Test binary, build with `go test -c`
 *.test
+reports/
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# SonarQube
+.scannerwork/
