@@ -17,7 +17,7 @@ lint:
 
 .PHONY: test
 test: format lint
-	go test -v -cover ./...
+	go test -v -cover -coverprofile=coverage.out ./...
 
 .PHONY: build
 build:
