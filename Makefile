@@ -17,7 +17,8 @@ lint:
 
 .PHONY: test
 test: format lint
-	go test -v -cover -coverprofile=coverage.out ./...
+	mkdir reports
+	go test -v -cover -coverprofile=reports/coverage.out -json ./... > reports/test.json
 
 .PHONY: build
 build:
@@ -38,5 +39,5 @@ release:
 .PHONY: clean
 clean:
 	go clean
-	rm -rf ./dist
+	rm -rf ./dist ./reports
 	rm -f $(BINARY_NAME)
