@@ -30,6 +30,11 @@ jobs:
             export SONAR_SCANNER_OPTS="-server"
             sonar-scanner \
               -Dsonar.login=$SONAR_LOGIN
+      - run:
+          name: Snyk monitor
+          command: |
+            curl -o /usr/local/bin/snyk -L https://github.com/snyk/snyk/releases/download/v1.217.3/snyk-linux
+            snyk monitor
 
 workflows:
   version: 2
