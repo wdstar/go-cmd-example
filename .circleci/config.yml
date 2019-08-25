@@ -7,7 +7,14 @@ jobs:
       GO111MODULE: "on"
     steps:
       - checkout
-      - run: make test
+      - run:
+          name: Install tools
+          command: |
+            go get golang.org/x/tools/cmd/goimports
+      - run:
+          name: Run unit tests
+          command: |
+            make test
 
 workflows:
   version: 2
