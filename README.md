@@ -1,4 +1,5 @@
 # go-cmd-example
+[![CircleCI](https://circleci.com/gh/wdstar/go-cmd-example.svg?style=shield)](https://circleci.com/gh/wdstar/go-cmd-example)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=wdstar_go-cmd-example&metric=alert_status)](https://sonarcloud.io/dashboard?id=wdstar_go-cmd-example)
 
 Golang CLI implementation example
