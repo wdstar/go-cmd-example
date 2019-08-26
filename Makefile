@@ -2,6 +2,12 @@ BINARY_NAME=go-cmd-example
 #FORMATTER=gofmt
 FORMATTER=goimports
 
+.PHONY: tools
+tools:
+	go get -u golang.org/x/tools/cmd/goimports
+	go get -u golang.org/x/lint/golint
+	go mod tidy
+
 .PHONY: deps
 deps:
 	go mod download

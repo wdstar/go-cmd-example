@@ -10,8 +10,7 @@ jobs:
       - run:
           name: Install tools
           command: |
-            go get golang.org/x/tools/cmd/goimports
-            go get -u golang.org/x/lint/golint
+            make tools
       - run:
           name: Run unit tests
           command: |
