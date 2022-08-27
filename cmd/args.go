@@ -34,6 +34,9 @@ var argsCmd = &cobra.Command{
 	Short: "Arguments processing examples",
 	Long: `You can pass arbitrary arguments.
 This subcommand print those command line.`,
+	// Cobra counts all arguments except the first double dash `--`.
+	// e.g. command line: go-cmd-example args a b -- c d (4 arguments)
+	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("args called")
 
