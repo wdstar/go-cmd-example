@@ -5,7 +5,8 @@ FORMATTER=goimports
 .PHONY: tools
 tools:
 	go install golang.org/x/tools/cmd/goimports@latest
-	go get -u golang.org/x/lint/golint
+	# TODO: use another linter
+	#go get -u golang.org/x/lint/golint
 	go mod tidy
 
 .PHONY: deps
@@ -18,7 +19,8 @@ format:
 
 .PHONY: lint
 lint:
-	golint -set_exit_status ./...
+	# TODO: use another linter
+	#golint -set_exit_status ./...
 	go vet ./...
 
 .PHONY: test
