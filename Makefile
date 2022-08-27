@@ -4,7 +4,7 @@ FORMATTER=goimports
 
 .PHONY: tools
 tools:
-	go get -u golang.org/x/tools/cmd/goimports
+	go install golang.org/x/tools/cmd/goimports@latest
 	go get -u golang.org/x/lint/golint
 	go mod tidy
 
