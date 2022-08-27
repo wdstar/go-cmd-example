@@ -43,3 +43,10 @@ Golang CLI implementation example
     $ git push --tags
     $ goreleaser --rm-dist
     ```
+
+### Update dependencies
+
+```bash
+$ go get -u
+$ go mod tidy
+```
