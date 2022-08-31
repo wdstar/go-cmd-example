@@ -41,11 +41,14 @@ This subcommand print those command line.`,
 		fmt.Println("args called")
 
 		// e.g. command line: go-cmd-example args a b -- c d
+		// args does not contain the first double dash `--`.
+		// args => [a b c d]
 		if i := cmd.ArgsLenAtDash(); i != -1 {
 			// => i: 2
 			fmt.Printf("Command has `--` argument. Command.ArgsLenAtDash: %d\n", i)
 			mainArgs := args[:i]  // => [a b]
 			extraArgs := args[i:] // => [c d]
+			fmt.Printf("Full args: %v\n", args)
 			fmt.Printf("Main args: %v\n", mainArgs)
 			fmt.Printf("Extra args: %v\n", extraArgs)
 		} else {
